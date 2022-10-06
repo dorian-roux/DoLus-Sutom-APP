@@ -1,0 +1,19 @@
+body{
+    /* background-color: black; */
+    margin-top: 5%;
+}
+
+h1{
+    /* color: white; */
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}
+
+span{
+    font-size: 30px;
+    margin-bottom: 50px;
+
+}

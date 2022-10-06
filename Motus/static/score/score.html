@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+
+        <h1>Score sur le MOT ACTUEL</h1>
+        <table>
+            <thead>
+                <th>Information</th>
+                <th>Value</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nb Words Found</td>
+                    <td><span id="score_value"></span></td>
+                </tr>
+                <tr>
+                    <td>Required Try</td>
+                    <td><span id="score_avgtry"></span></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h1>Score du PROFIL</h1>
+        <table>
+            <thead>
+                <th>Information</th>
+                <th>Value</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total Number of Words</td>
+                    <td><span id="total_words"></span></td>
+                </tr>
+                <tr>
+                    <td>Total Number of Words Found</td>
+                    <td><span id="total_score"></span></td>
+                </tr>
+                <tr>
+                    <td>Total Number of Attempts</td>
+                    <td><span id="total_attemps"></span></td>
+                </tr>
+                <tr>
+                    <td>Total Average of Attempts to Succeed</td>
+                    <td><span id="total_average_attempts"></span></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    <div>
+        <a href="/">
+            <button>Back to Main Page</button>
+        </a>
+    </div>
+
+
+
+    <script>
+        let user_score_word =  JSON.parse(localStorage.score_current_word) 
+
+        if (user_score_word.average_try==null){
+            user_score_word.average_try = "No Data Available"
+        }
+
+
+        var is_find = "Word not Find"
+        if (user_score_word.score != 0){
+            is_find = "Word has been Find"
+        }
+        $("#score_value").html(is_find)
+        $("#score_avgtry").html(user_score_word.average_try)
+
+
+
+        let user_score_all_word = JSON.parse(localStorage.score_all_word)
+        if (user_score_all_word.average_try==null){
+            user_score_all_word.average_try = "No Data Available"
+        }
+
+
+        $("#total_words").html(user_score_all_word.all_words)
+        $("#total_score").html(user_score_all_word.all_score)
+        $("#total_attemps").html(user_score_all_word.all_try)
+        $("#total_average_attempts").html(user_score_all_word.average_try)
+
+    </script>
+    <!-- <script src="score.js"></script> -->
+    </body>
+
+</html>

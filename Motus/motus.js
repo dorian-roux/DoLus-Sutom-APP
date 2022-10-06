@@ -1,34 +1,71 @@
 const express = require('express')
 const os = require('os');
-const serveStatic = require('serve-static')
 const fs = require('fs')
 const app = express()
-
-const port = process.env.PORT || 4000 
+var path = require('path');
+const port = process.env.PORT || 3001
 
 
 
 // Word List
-const resultArray = fs.readFileSync('./data/liste_francais_utf8.txt', {encoding:'utf8', flag:'r'}).split("\n")
+// const resultArray = fs.readFileSync('./data/liste_francais_utf8.txt', {encoding:'utf8', flag:'r'}).split("\n")
+
+// Back-END Functions
+function ReadFileWords(filename_words){
+  return fs.readFileSync(filename_words, {encoding:'utf8', flag:'r'}).split('\n');
+}
+
+function GetTimeinDays(){
+  const oneDayInMs = 1000 * 60 * 60 * 24;
+  const currentTimeInMs = new Date().getTime();  // UTC time
+  const timeInDays = Math.floor(currentTimeInMs / oneDayInMs);
+  return timeInDays;
+}
 
 
-
-// Find the INDEX
-var seed = parseInt(resultArray.length/390) // Set a seed (for 390 words)
-var oneDayInMs = 1000 * 60 * 60 * 24;
-var currentTimeInMs = new Date().getTime();  // UTC time
-var timeInDays = Math.floor(currentTimeInMs / oneDayInMs);
-var numberForToday = seed * timeInDays % resultArray.length;
-
+function GetWord(){
+  const array_words = ReadFileWords('data/liste_francais_utf8.txt');
+  const timeInDays = GetTimeinDays();
+  const seed = 390  // Set a seed (for 390 words)
+  const word = array_words[(parseInt(array_words.length/390) * timeInDays) % array_words.length]; 
+  return word;
+}
 
 
 // APP
-app.use(serveStatic('static', { index: ['default.html', 'default.htm'] }))
 
+
+
+app.use(express.static(path.join(__dirname, 'static/default'), { index: ['default.html', 'default.htm'] }))
+
+
+app.get('/health', (req, res) => {
+  res.send('ok')
+})
+
+
+app.get('/login', (req, res) => {
+  res.sendFile( __dirname + "/static/login/" + "login.html" );
+})
+
+
+app.get('/seed', (req, res) => {
+  let seed = 10
+  res.send(seed.toString());
+})
+
+
+
+app.get('/score', (req, res) => {
+  res.sendFile( __dirname + "/static/score/" + "score.html" );
+})
 
 
 app.get('/word', (req, res) => {
-  res.send(resultArray[numberForToday]);
+  const word = GetWord();
+  const firstHint = word[0];
+  res.send(word)
+
 })
 
 
