@@ -1,6 +1,7 @@
 # Motus 
 
 
+
 ```mermaid
 sequenceDiagram
     Client ->>+ Authentification: Credentials (Login / Password)    
@@ -8,3 +9,7 @@ sequenceDiagram
     Client ->>+ Back End: API Request
     Client ->>+ Back End: word
 ```
+
+
+## Score Management
+

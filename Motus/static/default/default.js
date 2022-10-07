@@ -24,7 +24,6 @@ $.get( "/word", function( data ) {
     document.getElementById("cword").value = first_letter
 });     
 
-
 // LOCAL USER MANAG
 if (!('current_user' in localStorage)){
     location.href = '/login'
@@ -57,6 +56,7 @@ function get_incrementation(word_to_guess, word_inputed){
 
 
 function func() {
+
     var u_value = document.getElementById("cword").value.toUpperCase()
     document.getElementById("cword").value = ""
 
