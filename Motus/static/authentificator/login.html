@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 
 <head>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -12,7 +12,7 @@
         <input type="text" id="username" name="word"><br><br>
         <input type="button" id="submit_username" value="Submit Username"><br><br>    
     </form> 
-    <!-- <script src="login.js"></script> -->
+    <script src="login.js"></script>
     <script>
 
         var btn_username = document.getElementById('submit_username');
@@ -27,5 +27,27 @@
         }
 
     </script>
+</body>
+</html> 
+-->
+
+
+<html>
+<head>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <form action="/user" method="post">
+        <h2>Login</h2>
+        <div class="input-field">
+            <input type="text" name="username" id="username" placeholder="Enter Username">
+        </div>
+        <div class="input-field">
+            <input type="password" name="password" id="password" placeholder="Enter Password">
+        </div>
+        <input type="submit" value="LogIn">
+    </form>
+
+    <button onclick="window.location.href = '/register'"">GO to REGISTER</button>
 </body>
 </html>

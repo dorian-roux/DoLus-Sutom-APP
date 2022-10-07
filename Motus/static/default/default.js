@@ -1,5 +1,5 @@
 // TITLE
-$('#content_title').html('Bienvenue ' + localStorage.current_user + ' au jeu MOTUS');
+$('#content_title').html('Bienvenue '  + ' au jeu MOTUS');
 
 
 
@@ -22,12 +22,36 @@ $.get( "/word", function( data ) {
     len_word_to_guess = data.trim().length
     first_letter = word_to_guess[0]
     document.getElementById("cword").value = first_letter
+    document.getElementById("cword").setAttribute("maxLength", len_word_to_guess)
+
 });     
 
-// LOCAL USER MANAG
-if (!('current_user' in localStorage)){
-    location.href = '/login'
+
+var score = {}
+$.get("/score_history", function( data ) {
+    score = data
+});    
+
+var user = 'Utilisateur2'
+
+function incremente_score(score_history, user, word_to_guess, word_inputed){
+    const user_dict = score_history[user]
+    if (!(Object.keys(user_dict).includes(word_to_guess))){
+        user_dict[word_to_guess] = {score: 0, total_attempts: 0}
+    }
+
+    let word_dict = user_dict[word_to_guess];
+    if (word_inputed == word_to_guess){
+        word_dict.score += 1 
+    }
+    word_dict.total_attempts += 1
+    user_dict[word_to_guess] = word_dict
+    score_history[user] = user_dict
+
 }
+
+
+
 
 // 
 
@@ -62,7 +86,8 @@ function func() {
 
 
     get_incrementation(word_to_guess, u_value)
-   
+    incremente_score(score, user, word_to_guess, u_value)
+
     var newSpan = document.createElement('span');
     document.getElementById('result').appendChild(newSpan);
     var true_word_splt = word_to_guess.split("")
@@ -80,7 +105,7 @@ function func() {
         if (true_word_splt[i] == user_word_splt[i]){
             newSpan.style.backgroundColor = "green"
         }else if (true_word_splt.includes(user_word_splt[i])){
-            newSpan.style.backgroundColor = "orange"
+            ne // wSpan.style.backgroundColor = "orange"
         }
     }
 }
@@ -112,6 +137,5 @@ function get_score_on_page(){
 
 
 function disconnect_profile(){
-    localStorage.removeItem('current_user')
-    window.location.href = '/login'
+    window.location.href = '/logout'
 }
