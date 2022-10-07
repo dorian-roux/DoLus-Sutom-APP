@@ -2,6 +2,7 @@ const express = require('express')
 const os = require('os');
 const fs = require('fs')
 const app = express()
+var session = require('express-session')
 var path = require('path');
 const port = process.env.PORT || 3001
 
@@ -33,7 +34,17 @@ function GetWord(){
 
 
 // APP
+var sess = {
+  secret: 'keyboard cat',
+  cookie: {}
+}
 
+if (app.get('env') === 'production') {
+  app.set('trust proxy', 1) // trust first proxy
+  sess.cookie.secure = true // serve secure cookies
+}
+
+app.use(session(sess))
 
 
 app.use(express.static(path.join(__dirname, 'static/default'), { index: ['default.html', 'default.htm'] }))
