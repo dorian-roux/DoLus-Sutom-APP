@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="/static/styles/login.css">
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div class="container_title">
+            <h1 id="login_title">Welcome to the REGISTER Page</h1>
+            <span>Register a new account</span>
+        </div>
+
+        
+        <form>
+            <div class="input-field">
+                <label for="input">Enter your Username:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" name="username" id="nclt-username">
+            </div>
+            <div class="input-field">
+                <label for="input">Enter your Password: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="password" name="password" id="nclt-password">
+            </div>
+            <div class="input-field">
+                <label for="input">Confirm your Password: &nbsp;</label>
+                <input type="password" name="cpassword" id="nclt-confirm-password">
+            </div>
+
+            <div class="input-login">
+                <button class="glow-on-hover" type="submit" id="btn-register">Create the Account</button>
+            </div>
+
+            <div class="input-register">
+                <span>Already Have an Account?</span><a href="/login">Login Here</a>
+            </div>
+        </form>
+
+        <script src="/static/scripts/register.js"></script>
+    </body>
+</html>

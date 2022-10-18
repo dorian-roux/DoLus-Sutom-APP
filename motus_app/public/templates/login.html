@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="/static/styles/login.css">
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div class="container_title">
+            <h1 id="login_title">Welcome to the LOGIN Page</h1>
+            <span>Sign in to your account</span>
+        </div>
+
+        
+        <form>
+            <div class="input-field">
+                <label for="input">Enter your Username:&nbsp;</label>
+                <input type="text" name="username" id="clt_username">
+            </div>
+            <div class="input-field">
+                <label for="input">Enter your Password: &nbsp;</label>
+                <input type="password" name="password" id="clt_password">
+            </div>
+            <div class="input-login">
+                <button class="glow-on-hover" type="submit" id="submit_login">Log In</button>
+            </div>
+
+            <div class="input-register">
+                <span>Don't Have an Account?</span><a href="/register">Register Here</a>
+            </div>
+
+        </form>
+
+        <script src="/static/scripts/login.js"></script>
+
+    </body>
+</html>

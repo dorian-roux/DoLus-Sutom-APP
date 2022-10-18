@@ -1,0 +1,21 @@
+{
+    "User1": {
+        "Word_X": {
+            "SCORE": 1,
+            "NUMBER_TRY": 5
+        }
+    },
+    "User2": {
+        "WORD_X": {
+            "SCORE": 0,
+            "NUMBER_TRY": 10
+        }
+    },
+    "Dorian": {
+        "CHU": {
+            "score": 1,
+            "total_attempts": 6
+        }
+    },
+    "DorianA": {}
+}

@@ -1,0 +1,22 @@
+version: "3.9"  # optional since v1.27.0
+
+services:
+  sutom:
+    build: ./motus_app
+    ports:
+      - "4000:4000"
+    restart: always
+
+  score:
+    build: ./score_app
+    ports:
+      - "4100:4100"
+    restart: always
+
+  
+  authenticate:
+    build: ./authentication_app
+    ports:
+      - "4200:4200"
+    restart: always
+
