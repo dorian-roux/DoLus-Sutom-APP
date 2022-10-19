@@ -1,35 +1,38 @@
 <!DOCTYPE html>
     <head>
-        <link rel="stylesheet" href="/static/styles/login.css">
+        <link rel="stylesheet" href="/static/styles/register.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
     <body>
 
-        <div class="container_title">
-            <h1 id="login_title">Welcome to the REGISTER Page</h1>
-            <span>Register a new account</span>
+        <div class="container-image">
+            <img src="/static/images/Logo.png">
         </div>
-
-        
+        <div class="container_title">
+            <span>Regoster a new account</span>
+        </div>
         <form>
             <div class="input-field">
-                <label for="input">Enter your Username:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input type="text" name="username" id="nclt-username">
+                <i class="fa fa-user"></i>
+                <input type="text" name="username" id="nclt-username" placeholder="Enter an USERNAME" autocomplete="off">
             </div>
             <div class="input-field">
-                <label for="input">Enter your Password: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input type="password" name="password" id="nclt-password">
+                <i class="fa fa-key"></i>
+                <input type="password" name="password" id="nclt-password" placeholder="Enter a PASSWORD">
             </div>
             <div class="input-field">
-                <label for="input">Confirm your Password: &nbsp;</label>
-                <input type="password" name="cpassword" id="nclt-confirm-password">
+                <i class="fa fa-check-double"></i>
+                <input type="password" name="cpassword" id="nclt-confirm-password" placeholder="Confirm your PASSWORD">
             </div>
-
-            <div class="input-login">
+            <div class="input-error-register">
+                <span id="register-error"></span>
+            </div>
+            <div class="input-register">
                 <button class="glow-on-hover" type="submit" id="btn-register">Create the Account</button>
             </div>
-
-            <div class="input-register">
+            <div class="input-gologin">
                 <span>Already Have an Account?</span><a href="/login">Login Here</a>
             </div>
         </form>

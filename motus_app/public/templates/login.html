@@ -1,35 +1,38 @@
 <!DOCTYPE html>
     <head>
         <link rel="stylesheet" href="/static/styles/login.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     </head>
     <body>
 
-        <div class="container_title">
-            <h1 id="login_title">Welcome to the LOGIN Page</h1>
-            <span>Sign in to your account</span>
+        <div class="container-image">
+            <img src="/static/images/Logo.png">
         </div>
-
-        
+        <div class="container_title">
+            <span>Sign In to your account</span>
+        </div>
         <form>
             <div class="input-field">
-                <label for="input">Enter your Username:&nbsp;</label>
-                <input type="text" name="username" id="clt_username">
+                <i class="fa fa-user"></i>
+                <input type="text" name="username" id="clt_username" placeholder="Enter your USERNAME" autocomplete="off">
             </div>
             <div class="input-field">
-                <label for="input">Enter your Password: &nbsp;</label>
-                <input type="password" name="password" id="clt_password">
+                <i class="fa fa-key"></i>
+                <input type="password" name="password" id="clt_password" placeholder="Enter your PASSWORD">
+            </div>
+            <div class="input-error-login">
+                <span id="login-error"></span>
             </div>
             <div class="input-login">
-                <button class="glow-on-hover" type="submit" id="submit_login">Log In</button>
+                <button class="glow-on-hover" type="submit" id="submit_login">Sign In</button>
             </div>
-
             <div class="input-register">
-                <span>Don't Have an Account?</span><a href="/register">Register Here</a>
+                <span>Don't have an Account yet?</span><a href="/register">Register Here</a>
             </div>
-
         </form>
 
+        <!-- JAVASCRIPT -->
         <script src="/static/scripts/login.js"></script>
 
     </body>
