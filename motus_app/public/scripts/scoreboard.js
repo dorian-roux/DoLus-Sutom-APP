@@ -11,16 +11,17 @@ const profile_words = document.getElementById('profile-words')
 const profile_score = document.getElementById('profile-score')
 const profile_ntry = document.getElementById('profile-ntry')
 const profile_avgtry = document.getElementById('profile-avgtry')
-
+const table_score = document.getElementById('table-user')
 
 
 // Title
 const title_score_profile = document.getElementById('score-profile')
 
 
+ 
 var username = ''
 $.get('/getUsername', function( udata ) {
-    title_score_profile.innerHTML =  `${udata} Complete Profile Score`
+    title_score_profile.innerHTML =  `${udata} Profile Score`
     $.get('/word', function ( wdata ) {
 
         fetch(`http://localhost:4100/get_user_information/?username=${udata}`)
@@ -55,6 +56,17 @@ $.get('/getUsername', function( udata ) {
 
                 // Profile User
                 profile_words.innerHTML = Object.keys(user_score).length
+                if (Object.keys(user_score).length==0){
+                    table_score.style.display="none"
+
+                    const noData = document.createElement("div");
+                    noData.style.textAlign="center"
+                    noData.style.fontSize="2rem"
+                    const newContent = document.createTextNode("No data available");
+                    noData.appendChild(newContent);
+                    document.body.insertBefore(noData, table_score);
+
+                }
                 profile_score.innerHTML = profile_all_score
                 profile_ntry.innerHTML = profile_all_attempts
                 profile_avgtry.innerHTML = Math.round((profile_all_attempts / profile_all_score) * 100) / 100

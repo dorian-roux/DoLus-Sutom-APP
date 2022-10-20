@@ -1,17 +1,135 @@
-# Motus 
+# DoLus 
+
+## Project structure
 
 
+├── authentication_app
+│   ├── authentication.js
+│   ├── data
+│   │   └── users_authentication.json
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── package-lock.json
+│   └── public
+│       ├── images
+│       │   └── Logo.png
+│       ├── scripts
+│       │   ├── login.js
+│       │   ├── main.js
+│       │   ├── register.js
+│       │   └── scoreboard.js
+│       ├── styles
+│       │   ├── login.css
+│       │   ├── main.css
+│       │   ├── register.css
+│       │   └── scoreboard.css
+│       └── templates
+│           ├── login.html
+│           ├── main.html
+│           ├── register.html
+│           └── scoreboard.html
+├── README.md
+├── score_app
+│   ├── data
+│   │   └── users.json
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── score.js
+
+---
+
+
+## Prerequisite
+
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+## Launching the app
+
+Clone the project using bash command
+
+```bash
+git clone https://github.com/dorian-roux/DoLus-Sutom-APP
+```
+Launch the docker container using docker-compose
+
+```bash
+docker-compose up -d
+```
+
+Open the following URL [http://localhost:4000](http://localhost/4000)
+
+
+## Front
+
+Basic HTML∕CSS template.
+
+## Motus app
+The user will get 2 informations the length and the first letter of the word to guess.
+The user must give a word of the right length.
+The app will check if the word exists.
+The score is updated every time the user submits a guess.
+If the word exists the app will highlight the right letters at the right position in green and the right one that are in the wrong position in orange.
 
 ```mermaid
 sequenceDiagram
-    Client ->>+ Authentification: Credentials (Login / Password)    
-    Authentification ->>+ Client: Token
-    Client ->>+ Back End: API Request
-    Client ->>+ Back End: word
+    User->>+App: User submits a guess
+    App->>+App: Check if the word exists
+    App->>+Score: Update score
+    alt if word exists
+        App->>+User: Highlight right letters with colors
+    else if right guess
+        App->>+User: Alert the guess was right
+    else If word doesn't exist
+        App->>+User: Alert the word doesn't exist
+end
+```
+
+## Database
+Authentication.json
+- `username` : username
+- `password` : hashed password
+
+users.json : one dictionnary per user and a sub dictionnary per word the user has guessed.
+- `username` : username
+- `word` : word guessed by the user
+- `score` : has the word been guessed ?
+- `number_try` : how many tries has been done for this word
+
+
+## Authentication
+
+```mermaid
+sequenceDiagram
+    Client ->>+ Authentication: Credentials (Login / Password)    
+    Authentication ->>+ Authentication: Check credentials
+
+    alt if right credentials
+        Authentication ->>+ Client: Redirect to main app
+    else if wrong credentials
+        Authentication ->>+ Client: Alert wrong password
+end
 ```
 
 
 ## Score Management
+
+When the user submits a guess the information is sent to the score app.
+The score app updates the score file according to the guess.
+The score app shows the informations stored in the score file
+
+
+```mermaid
+sequenceDiagram
+    User->>+App: User submits a guess
+    App->>+App: Check if the word exists
+    App->>+Score: Send guess information
+    Score->>+Score: Update number of try
+    alt if right guess
+        Score->>+Score: Update the boolean for the word guessed
+end
+```
 
 
     which server are you gone use ?

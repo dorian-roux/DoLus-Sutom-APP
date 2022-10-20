@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 
     <head>
+        <link rel="stylesheet" href="/static/styles/scoreboard.css">
         <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     </head>
 
     <body>
-
-
+        <div class="container-image">
+            <img src="/static/images/Logo.png">
+        </div>
         <h1>Score on TODAY's WORD</h1>
+        <div class="word-score">
         <span id="word-score-value"></span>
         <br>
         <span id="word-score-ntry"></span>
-
+        </div>
 
 
         <h1 id="score-profile">Scores about the Profile</h1>
+        <div class="score-user" id="table-user">
         <table>
             <thead>
                 <th>Information</th>
@@ -39,10 +43,10 @@
                 </tr>
             </tbody>
         </table>
+    </div>
 
-
-    <div>
-        <button id="btn-main-page">Back to Main Page</button>
+    <div class="button">
+        <button class="glow-on-hover" id="btn-main-page">Back to Main Page</button>
     </div>
 
     <script src="/static/scripts/scoreboard.js"></script>
