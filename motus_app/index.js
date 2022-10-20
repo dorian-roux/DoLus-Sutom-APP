@@ -4,9 +4,25 @@ const app = express()
 const fs = require('fs')
 const os = require('os')
 const session = require('express-session')
-
 const port = process.env.PORT || 4000;
 
+
+const loki_uri = process.env.LOKI || "http://127.0.0.1:3100";
+// Logger
+const { createLogger, transports } = require("winston");
+const LokiTransport = require("winston-loki");
+const Option = {
+  transports: [
+    new LokiTransport({
+      host: loki_uri
+    })
+  ]
+};
+
+const logger = createLogger(Option)
+
+logger.info({ message: 'Init' , labels: {'user':'foo' } })
+console.log("loki log done")
 
 app.use('/static', express.static('public'))
 
@@ -25,12 +41,37 @@ app.get('/session', (req, res) => { // Display the content of the session at the
 app.get('/updateUserSession', (req, res) => {
   username = req.query.username
   req.session.username = username
+  req.session.level = '0'
   res.send(JSON.stringify(req.session))
 })
 
 app.get('/getUsername', (req, res) => {
   res.send(req.session.username)  
 })
+
+app.get('/getLevel', (req, res) => {
+  res.send(req.session.level)  
+})
+
+
+app.get('/getUpdateLevel', (req, res) => {
+  req.session.level = (parseInt(req.session.level) + 1).toString()
+  res.send(req.session.level)   
+})
+
+app.get('/gameGrid', (req, res) => {
+  grid = req.session.grid;
+  res.send(grid);
+})
+
+
+app.get('/initializeSessionGrid', (req, res) => {
+  wlength = req.query.wlength;
+  nlevel = req.query.nlevel;
+  req.session.grid = InitializeGrid(wlength, nlevel)
+  res.send(req.session.grid);
+})
+
 
 
 // var session_temp;
@@ -63,6 +104,19 @@ app.get('/logout', (req, res) => {
   req.session.destroy();
   res.redirect('/');
 })
+
+
+// GRID APPLIANCE
+app.get('/registerUserGrid', (req, res) => {
+  const username = req.query.username
+  res.send(registerUserGrid(username))
+});
+
+app.get('/verifyUserGrid', (req, res) => {
+  const username = req.session.username
+  const word = req.session.word
+  res.send(verifyUserGrid(username, word))
+});
 
 
 
@@ -126,11 +180,51 @@ app.get('/word', (req, res) => {
     }
     const word = GetWord(parseInt(parametrize_seed.value));
     const firstHint = word[0];
+    req.session.word = word;
     res.send(word, word.length, firstHint)
+
   })
   
 
 
+
+
+function registerUserGrid(username){
+  const users_grid_file = path.join(__dirname, 'data/grids.json')
+  const users_grid = readJsonSync(users_grid_file)
+
+  // -- Verify Use Cases --
+  if (username == null){
+      return ('Insert an Authorize Username')
+  }
+
+  // -- Append the Identifiers into the Flat File --
+  users_grid[username] = {}; // --- Append into the user authentication dictionnary ---
+  fs.writeFileSync(users_grid_file, JSON.stringify(users_grid, null, 4));  // --- Overwrite the JSON file ---
+  return (`${username} GRID has been Created`)
+}
+
+
+function verifyUserGrid(username, word){
+  const users_grid_file = path.join(__dirname, 'data/grids.json')
+  const users_grid = readJsonSync(users_grid_file)
+  const c_user_grid = users_grid[username]
+  
+
+}
+
+
+function InitializeGrid(ncharacters, nlevel=6){
+  const grid = {}
+
+  for (let i = 0; i < nlevel; i++){
+    grid[`LEVEL_${i}`] = {}
+    for (let j = 0; j < ncharacters; j++){
+      grid[`LEVEL_${i}`][`CHARACTER_${j}`] = {'LETTER': '', 'BACKGROUND-COLOR': ''}
+    }
+  }
+  return grid
+}
 
 // Read and Get Daily WORD
 /// Functions
@@ -158,4 +252,10 @@ function GetWord(seed=390){
   const timeInDays = GetTimeinDays();
   const word = array_words[(parseInt(array_words.length/seed) * timeInDays) % array_words.length]; 
   return word.trim();
+}
+
+
+// Read JSON Users File
+function readJsonSync(filename_json){
+  return JSON.parse(fs.readFileSync(filename_json))
 }

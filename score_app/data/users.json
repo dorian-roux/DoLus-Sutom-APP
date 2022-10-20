@@ -1,21 +1,32 @@
 {
-    "User1": {
-        "Word_X": {
-            "SCORE": 1,
-            "NUMBER_TRY": 5
-        }
-    },
-    "User2": {
-        "WORD_X": {
-            "SCORE": 0,
-            "NUMBER_TRY": 10
-        }
-    },
     "Dorian": {
         "CHU": {
             "score": 1,
             "total_attempts": 6
+        },
+        "ANIMES": {
+            "score": 0,
+            "total_attempts": 4
+        },
+        "PEINTRE": {
+            "score": 1,
+            "total_attempts": 17
+        },
+        "RUDOLF": {
+            "score": 0,
+            "total_attempts": 1
         }
     },
-    "DorianA": {}
+    "D": {},
+    "Test": {},
+    "TT": {},
+    "TTT": {},
+    "TA": {},
+    "RF": {},
+    "Testz": {
+        "COLETTE": {
+            "score": 1,
+            "total_attempts": 1
+        }
+    }
 }

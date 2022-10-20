@@ -102,7 +102,7 @@ function get_new_word() {
 }
 
 function func() {
-
+    
     // Set Current TABLE LEVEL (amount of guess so far)
     localStorage.setItem('LEVEL', parseInt(localStorage.getItem('LEVEL')) + 1)
     var level = parseInt(localStorage.getItem('LEVEL'))

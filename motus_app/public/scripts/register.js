@@ -51,6 +51,8 @@ function makeRegisterUser(event){
         if (text) {
             if (text=="true"){
                 fetch('http://localhost:4100/registerUserScore/?username=' + username);
+                fetch('http://localhost:4000/registerUserGrid/?username=' + username);
+
                 swal('Account Successfully Created!', "You will now be redirected to the Login.", "success")
                 .then(() => {
                     document.location = '/login';

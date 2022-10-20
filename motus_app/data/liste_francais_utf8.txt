@@ -1344,7 +1344,6 @@ apparente
 appariteur
 apparition
 appartement
-appartement)
 appartements
 appartenaient
 appartenait
@@ -2169,7 +2168,6 @@ aviez
 Avignon
 avilir
 avion
-avion)
 avions
 aviron
 avis
@@ -5683,7 +5681,6 @@ crépi
 crépir
 crépiter
 crépu
-crépus)
 crépuscule
 cresson
 crête

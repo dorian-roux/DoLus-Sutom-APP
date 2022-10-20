@@ -92,6 +92,8 @@ function incrementUserScore(username, word_to_guess, word_guessed){
     return (`${username} Score has been UPDATED`)
 }
 
+
+
 function registerUserScore(username){
     const users_score_file = path.join(__dirname, 'data/users.json')
     const users_score = readJsonSync(users_score_file)
@@ -104,13 +106,12 @@ function registerUserScore(username){
     // -- Append the Identifiers into the Flat File --
     users_score[username] = {}; // --- Append into the user authentication dictionnary ---
     fs.writeFileSync(users_score_file, JSON.stringify(users_score, null, 4));  // --- Overwrite the JSON file ---
-    return (`${username} has been Created`)
+    return (`${username} SCORE has been Created`)
     
 }
 
 
   
-
 
 
 

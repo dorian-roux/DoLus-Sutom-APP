@@ -1,22 +1,109 @@
-version: "3.9"  # optional since v1.27.0
+version: '2.1'
+
+networks:
+  app-net:
+    driver: bridge
+
+volumes:
+    prometheus_data: {}
+    grafana_data: {}
+
 
 services:
   sutom:
     build: ./motus_app
+    image: sutom
+    container_name: sutom
     ports:
       - "4000:4000"
+    environment:
+      - PORT=4000
+      - LOKI=http://loki:3100
     restart: always
+    networks:
+      - app-net
 
   score:
+    image: score
+    container_name: score
     build: ./score_app
     ports:
       - "4100:4100"
     restart: always
+    networks:
+      - app-net
 
   
   authenticate:
+    image: authenticate
+    container_name: authenticate
     build: ./authentication_app
     ports:
       - "4200:4200"
     restart: always
+    networks:
+      - app-net
 
+
+  # Grafana
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+    restart: unless-stopped
+    networks:
+      - app-net
+
+
+  # Loki
+  loki:
+    image: grafana/loki
+    container_name: loki
+    ports:
+      - "3100:3100"
+    expose:
+      - "3100"
+    restart: unless-stopped
+    networks:
+      - app-net
+
+
+  # Prometheus
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./prometheus/:/etc/prometheus/
+    restart: unless-stopped
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    expose:
+      - 9090
+    ports:
+      - 9090:9090
+    networks:
+      - app-net
+
+  # Node-Exporter
+  node-exporter:
+      image: prom/node-exporter:latest
+      container_name: node-exporter
+      restart: unless-stopped
+      volumes:
+        - /proc:/host/proc:ro
+        - /sys:/host/sys:ro
+        - /:/rootfs:ro
+      command:
+        - '--path.procfs=/host/proc'
+        - '--path.rootfs=/rootfs'
+        - '--path.sysfs=/host/sys'
+        - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+      expose:
+        - "9100"
+      ports:
+        - "9100:9100"
+      networks:
+        - app-net
