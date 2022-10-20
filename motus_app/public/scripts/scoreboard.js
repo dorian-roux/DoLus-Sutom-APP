@@ -31,16 +31,19 @@ $.get('/getUsername', function( udata ) {
         }).then(text => {
             if (text) {
                 user_score = JSON.parse(text)
-                user_score_cword = user_score[wdata]
-                if (user_score_cword.score == 0){
-                    word_score_value.innerHTML = "Today's Word has not been find"
+                if (!(Object.keys(user_score).includes(wdata))){
+                    word_score_value.innerHTML = "Today's Word has not been played" 
                 }else{
-                    word_score_value.innerHTML = "Today's Word has been find"
+                    user_score_cword = user_score[wdata]
+                    if (user_score_cword.score == 0){
+                        word_score_value.innerHTML = "Today's Word has not been found"
+                    }else{
+                        word_score_value.innerHTML = "Today's Word has been found"
+                    }
+                    word_score_ntry.innerHTML = `Number of Attempts: ${user_score_cword.total_attempts}`    
                 }
-                word_score_ntry.innerHTML = `Number of Attempts: ${user_score_cword.total_attempts}`
+               
             
-            
-              dd
 
                 var profile_all_attempts = 0
                 var profile_all_score = 0
