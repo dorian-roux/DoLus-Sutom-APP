@@ -13,7 +13,6 @@ services:
     environment:
       - PORT=4000
       - LOKI=http://loki:3100
-    restart: always
     networks:
       - app-net
 
@@ -23,7 +22,6 @@ services:
     build: ./score_app
     ports:
       - "4100:4100"
-    restart: always
     networks:
       - app-net
 
@@ -34,7 +32,6 @@ services:
     build: ./authentication_app
     ports:
       - "4200:4200"
-    restart: always
     networks:
       - app-net
 
@@ -47,7 +44,6 @@ services:
       - "3000:3000"
     expose:
       - "3000"
-    restart: unless-stopped
     networks:
       - app-net
 
@@ -60,7 +56,6 @@ services:
       - "3100:3100"
     expose:
       - "3100"
-    restart: unless-stopped
     networks:
       - app-net
 
@@ -71,7 +66,6 @@ services:
     container_name: prometheus
     volumes:
       - ./prometheus/:/etc/prometheus/
-    restart: unless-stopped
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
     expose:
@@ -85,7 +79,6 @@ services:
   node-exporter:
     image: prom/node-exporter:latest
     container_name: node-exporter
-    restart: unless-stopped
     volumes:
       - /proc:/host/proc:ro
       - /sys:/host/sys:ro

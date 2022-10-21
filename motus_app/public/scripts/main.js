@@ -1,6 +1,6 @@
 // BUTTONS
-var btn = document.getElementById('submit_guess');
-btn.addEventListener('click', func);
+var btn_guess = document.getElementById('submit_guess');
+btn_guess.addEventListener('click', func);
 
 var btn_new_word = document.getElementById('get_new_word');
 btn_new_word.addEventListener('click', get_new_word);
@@ -12,6 +12,9 @@ var btn_disconnect = document.getElementById('disconnect_button')
 btn_disconnect.addEventListener('click', disconnect_profile);
 
 
+var div_word_success_failure = document.getElementById('word-find-success-failure')
+var txt_error_guess = document.getElementById('error-guess')
+
 
 // Set MOTUS Title
 var username = ""
@@ -20,75 +23,177 @@ $.get( "/getUsername", function( data ) {
     $('#content_title').html(`Bienvenue ${username} sur le Jeu du MOTUS`);
 });     
 
-localStorage.setItem('LEVEL', 0)
+
 var word_to_guess = ""
 $.get( "/word", function( data ) {
     word_to_guess = data.trim().toUpperCase()
-
-    var level = parseInt(localStorage.getItem('LEVEL'))
-    var newTR = document.createElement('tr')
-    document.getElementById('test_grille').appendChild(newTR);
-    
-    for (let i = 0; i < word_to_guess.length; i++) {
-        var newInput = document.createElement('input');
-        newInput.setAttribute('id', `input_${level}_${i+1}`)
-        newInput.setAttribute("maxLength", 1)
-        newInput.setAttribute("oninput", "this.value = this.value.toUpperCase()");
-        if (i==0){
-            newInput.value = word_to_guess[i]
-        }
-        newTR.appendChild(newInput);
-    }
-});     
-
-var array_words = []
-$.get( "/motus/array_size", function( data ) {
-    array_words = data
-
+    build_grid(word_to_guess)
 })
 
 
-// var score = {}
-// $.get("/score_history", function( data ) {
-//     score = data
-// });    
+function build_grid(word_to_guess, rebuild_grid=false){
+    // FETCH the GRID
+    fetch('http://localhost:4000/verifyUserGrid')  // Verify the Existence of the GRID
+    fetch('http://localhost:4000/makeUserWordGrid')  // Get the GRID
+    .then(response => {
+        if(response.ok){
+            return response.text();
+        }
+    }).then(text => {
+        if (text) {
+            const user_cword_grid = JSON.parse(text)
+            const user_grid = user_cword_grid['GRID']
+            var is_disabled = false
 
+            // WORD FOUND
+            if (user_cword_grid['DISCOVERED']){
+                div_word_success_failure.style.display = "block";
+                var firstSpan = document.createElement('span')
+                var secondSpan = document.createElement('span')
+                div_word_success_failure.appendChild(firstSpan);
+                div_word_success_failure.appendChild(document.createElement('br'));
+                div_word_success_failure.appendChild(secondSpan);
+                firstSpan.innerHTML = "Congratulation, you find Today's Word!";
+                secondSpan.innerHTML = "Come back TOMORROW to enjoy even more our GAME!";
+                firstSpan.style.color = "#05A105";
+                secondSpan.style.color = "#05A105";
+                btn_guess.style.display = "none";
+                is_disabled = true   
+            }
 
+            // WORD not FOUND
+            if (user_grid['LEVEL'] >= 5){
+                div_word_success_failure.style.display = "block";
+                var firstSpan = document.createElement('span')
+                var secondSpan = document.createElement('span')
+                div_word_success_failure.appendChild(firstSpan);
+                div_word_success_failure.appendChild(document.createElement('br'));
+                div_word_success_failure.appendChild(secondSpan);
+                firstSpan.innerHTML = "Too Bad, you had your chance and you did not find Today's Word!!";
+                secondSpan.innerHTML = "Come back TOMORROW and get your revenge against our GAME!";                
+                firstSpan.style.color = "#850000";
+                secondSpan.style.color = "#850000";
+                btn_guess.style.display = "none";
+                is_disabled = true   
+            }
+            
 
-function incremente_score(score_history, user, word_to_guess, word_inputed){
-    const user_dict = score_history[user]  // Get dict associated to the current USER
-    if (!(Object.keys(user_dict).includes(word_to_guess))){  // Check whenever the current WORD is not in the FILE 
-        user_dict[word_to_guess] = {score: 0, total_attempts: 0}
-    }
-
-    let word_dict = user_dict[word_to_guess];
-    if (word_inputed == word_to_guess){
-        word_dict.score += 1 
-    }
-    word_dict.total_attempts += 1
-    user_dict[word_to_guess] = word_dict
-    score_history[user] = user_dict
-
+            // ReBuild the GRID (INPUTS IDs already exists)
+            if (rebuild_grid){
+                for (let i_lvl=0; i_lvl < 5; i_lvl++){
+                    for (let i_wtg=0; i_wtg < word_to_guess.length; i_wtg++) {
+                        var newInput = document.getElementById(`input_${i_lvl}_${i_wtg}`)
+                        newInput.value = user_grid['SCHEME'][`LEVEL_${i_lvl}`][`CHARACTER_${i_wtg}`]['LETTER']
+                        newInput.style.backgroundColor = user_grid['SCHEME'][`LEVEL_${i_lvl}`][`CHARACTER_${i_wtg}`]['BACKGROUND-COLOR']
+                        newInput.disabled = true
+                        if (!is_disabled){
+                            if (user_grid['LEVEL'] == i_lvl){
+                                newInput.disabled = false
+                            }
+                        }
+                    }
+                }
+            }else{
+                // Build the GRID (Initialize the INPUTS and IDs)
+                for (let i_lvl=0; i_lvl < 5; i_lvl++){
+                    var newTR = document.createElement('tr')
+                    document.getElementById('test_grille').appendChild(newTR);
+                    for (let i_wtg=0; i_wtg < word_to_guess.length; i_wtg++) {
+                        var newInput = document.createElement('input');
+                        newInput.setAttribute('id', `input_${i_lvl}_${i_wtg}`)
+                        newInput.setAttribute("maxLength", 1)
+                        newInput.setAttribute("oninput", "this.value = this.value.toUpperCase()");
+                        newInput.value = user_grid['SCHEME'][`LEVEL_${i_lvl}`][`CHARACTER_${i_wtg}`]['LETTER']
+                        newInput.style.backgroundColor = user_grid['SCHEME'][`LEVEL_${i_lvl}`][`CHARACTER_${i_wtg}`]['BACKGROUND-COLOR']
+                        newInput.disabled = true
+                        if (!is_disabled){
+                            if (user_grid['LEVEL'] == i_lvl){
+                                newInput.disabled = false
+                            }
+                        }
+                        newTR.appendChild(newInput);
+                    }
+                }
+            }
+        }
+    })
 }
 
 
-function get_incrementation(word_to_guess, word_inputed){
-    let user_score = JSON.parse( localStorage[localStorage.current_user] );
+function modify_grid(word_to_guess){
+    // FETCH the GRID
+    fetch('http://localhost:4000/makeUserWordGrid')
+    .then(response => {
+        if(response.ok){
+            return response.text();
+        }
+    }).then(text => {
+            const user_cword_grid = JSON.parse(text)
+            const user_grid = user_cword_grid['GRID']
+            var is_disabled = false
 
-    if (!(word_to_guess in user_score)){
-        user_score[word_to_guess] = JSON.stringify( {score: 0, total_try: 0, average_try: null} ) 
-        localStorage[localStorage.current_user] = JSON.stringify( user_score )
-    }
+            // WORD FOUND
+            if (user_cword_grid['DISCOVERED']){
+                div_word_success_failure.style.display = "block";
+                var firstSpan = document.createElement('span')
+                var secondSpan = document.createElement('span')
+                div_word_success_failure.appendChild(firstSpan);
+                div_word_success_failure.appendChild(document.createElement('br'));
+                div_word_success_failure.appendChild(secondSpan);
+                firstSpan.innerHTML = "Congratulation, you find Today's Word!";
+                secondSpan.innerHTML = "Come back TOMORROW to enjoy even more our GAME!";
+                firstSpan.style.color = "#05A105";
+                secondSpan.style.color = "#05A105";
+                btn_guess.style.display = "none";
+                is_disabled = true  
+                // WORD NOT FIND AND CHANCE STILL ON
+                for (let i_lvl=0; i_lvl < 5; i_lvl++){
+                    for (let i_wtg=0; i_wtg < word_to_guess.length; i_wtg++) {
+                        var newInput = document.getElementById(`input_${i_lvl}_${i_wtg}`)
+                        newInput.value = user_grid['SCHEME'][`LEVEL_${i_lvl}`][`CHARACTER_${i_wtg}`]['LETTER']
+                        newInput.style.backgroundColor = user_grid['SCHEME'][`LEVEL_${i_lvl}`][`CHARACTER_${i_wtg}`]['BACKGROUND-COLOR']
+                        newInput.disabled = true
+                        if (!is_disabled){
+                            if (user_grid['LEVEL'] == i_lvl){
+                                newInput.disabled = false
+                            }
+                        }
+                    }
+            } 
+                
+            }
 
-    let u_score_word =  JSON.parse( user_score[word_to_guess] );
-    if (word_inputed == word_to_guess){
-        u_score_word.score += 1 
-    }
-    u_score_word.total_try += 1
-    u_score_word.average_try = u_score_word.total_try / u_score_word.score
-    user_score[word_to_guess] = JSON.stringify( u_score_word )
-    localStorage[localStorage.current_user] = JSON.stringify( user_score )
-
+            // WORD not FOUND
+            if (user_grid['LEVEL'] >= 5){
+                div_word_success_failure.style.display = "block";
+                var firstSpan = document.createElement('span')
+                var secondSpan = document.createElement('span')
+                div_word_success_failure.appendChild(firstSpan);
+                div_word_success_failure.appendChild(document.createElement('br'));
+                div_word_success_failure.appendChild(secondSpan);
+                firstSpan.innerHTML = "Too Bad, you had your chance and you did not find Today's Word!!";
+                secondSpan.innerHTML = "Come back TOMORROW and get your revenge against our GAME!";                
+                firstSpan.style.color = "#850000";
+                secondSpan.style.color = "#850000";
+                btn_guess.style.display = "none";
+                is_disabled = true   
+            }
+            
+            // WORD NOT FIND AND CHANCE STILL ON
+            for (let i_lvl=0; i_lvl < 5; i_lvl++){
+                for (let i_wtg=0; i_wtg < word_to_guess.length; i_wtg++) {
+                    var newInput = document.getElementById(`input_${i_lvl}_${i_wtg}`)
+                    newInput.value = user_grid['SCHEME'][`LEVEL_${i_lvl}`][`CHARACTER_${i_wtg}`]['LETTER']
+                    newInput.style.backgroundColor = user_grid['SCHEME'][`LEVEL_${i_lvl}`][`CHARACTER_${i_wtg}`]['BACKGROUND-COLOR']
+                    newInput.disabled = true
+                    if (!is_disabled){
+                        if (user_grid['LEVEL'] == i_lvl){
+                            newInput.disabled = false
+                        }
+                    }
+                }
+            }
+        })
 }
 
 
@@ -101,105 +206,57 @@ function get_new_word() {
     })
 }
 
-function func() {
-    
-    // Set Current TABLE LEVEL (amount of guess so far)
-    localStorage.setItem('LEVEL', parseInt(localStorage.getItem('LEVEL')) + 1)
-    var level = parseInt(localStorage.getItem('LEVEL'))
 
-    // var u_value = document.getElementById("cword").value.toUpperCase()
-    // document.getElementById("cword").value = ""
+async function func() {
+ 
 
-    // get_incrementation(word_to_guess, u_value)
-    // incremente_score(score, user, word_to_guess, u_value)
+    // Get the current GRID LEVEL
+    var grid_level = await getLevelGrid('http://localhost:4000/makeUserWordGrid')
+    grid_level = grid_level['GRID']['LEVEL']
 
-    
-    // Loop that check that EVERY INPUT is FILLED
+
+    // Compose the SUBMITED WORD through a LOOP
     var composed_word = ""
-    for (let i = 0; i < word_to_guess.length; i++) {
-        var slctInput = document.getElementById(`input_${level-1}_${i+1}`)
-        if (slctInput.value == ""){
-            localStorage.setItem('LEVEL', parseInt(localStorage.getItem('LEVEL')) - 1)
-            return alert('You must fill all the BLANKS!')
-
-        }
+    for (let i_wtg = 0; i_wtg < word_to_guess.length; i_wtg++) {
+        var slctInput = document.getElementById(`input_${grid_level}_${i_wtg}`)
         composed_word = composed_word + slctInput.value
-
     }
 
-    // CASE 0: WORD NOT IN BASE
-    if (!(array_words.includes(composed_word))){
-        for (let i = 1; i < word_to_guess.length; i++) {
-            var slctInput = document.getElementById(`input_${level-1}_${i+1}`)
-            slctInput.value = ""
+    fetch(`http://localhost:4000/modifyUserGrid/?word_to_guess=${word_to_guess}&word_guessed=${composed_word}`)
+    .then(response => {
+        if(response.ok){
+            return response.text();
         }
-        return alert('Word not in Base')
-        
-    }
+    }).then(text => {
+        if (text == 'CASE_1'){
+            getWarningInformation(txt_error_guess, 'Please FILL all the INPUTs')
+            modify_grid(word_to_guess)
 
+        }else if (text == 'CASE_2'){
+            getWarningInformation(txt_error_guess, 'NO such WORD exists within the DATABASE')
+            modify_grid(word_to_guess)
 
-    // CASE 1: WORD ALL GUESSED
-    if (composed_word == word_to_guess){
-        for (let i = 0; i < word_to_guess.length; i++) {
-            var slctInput = document.getElementById(`input_${level-1}_${i+1}`)
-            slctInput.style.backgroundColor = "green"
+        }else if (text == 'CASE_3'){
+            fetch(`http://localhost:4100/incrementUserScore/?username=${username}&wtg=${word_to_guess}&wg=false`)
+            modify_grid(word_to_guess)
+
+        }else if (text == 'CASE_4'){
+            fetch(`http://localhost:4100/incrementUserScore/?username=${username}&wtg=${word_to_guess}&wg=true`)
+            modify_grid(word_to_guess)
+
         }
-        fetch(`http://localhost:4100/incrementUserScore/?username=${username}&wtg=${word_to_guess}&wg=true`)
-        btn_new_word.style.display = "inline"
-        return alert("Congratulation! You guessed TODAY's Word. If you want more FUN press the 'Guess a New Word' button!")
+    })
 
-    }
-
-    // CASE 2: WORD NOT GUESSED
-    var newTR = document.createElement('tr')
-    newTR.setAttribute('id', `tr_${level}`)
-    document.getElementById('test_grille').appendChild(newTR);
-
-    for (let i = 0; i < word_to_guess.length; i++) {
-        var slctInput = document.getElementById(`input_${level-1}_${i+1}`)
-        var newInput = document.createElement('input');
-        newInput.setAttribute('id', `input_${level}_${i+1}`)
-        newInput.setAttribute("maxLength", 1)
-        newInput.setAttribute("oninput", "this.value = this.value.toUpperCase()");
-
-        if (slctInput.value == word_to_guess[i]){
-            slctInput.style.backgroundColor = "green"
-            newInput.value = word_to_guess[i]
-        }else if (word_to_guess.includes(slctInput.value)){
-            slctInput.style.backgroundColor = "orange"
-        }
-
-        newTR.appendChild(newInput);
-    }
-    fetch(`http://localhost:4100/incrementUserScore/?username=${username}&wtg=${word_to_guess}&wg=false`)
-
-
+    modify_grid(word_to_guess)
 }
 
 
+async function getLevelGrid(url) {
+    const response = await fetch(url);
+    return response.json();
+  }
+  
 
-// // SCORE
-function get_score_on_page(){
-    let user_score = JSON.parse( localStorage[localStorage.current_user] );
-    if (!(word_to_guess in user_score)){
-        user_score[word_to_guess] = JSON.stringify( {score: 0, total_try: 0, average_try: null} ) 
-        localStorage[localStorage.current_user] = JSON.stringify( user_score )
-    }
-    let u_score_word =  JSON.parse( user_score[word_to_guess] );
-
-    const nbr_words = Object.keys(user_score).length
-    var total_score = 0
-    var total_try = 0
-    for (let i = 0; i < nbr_words; i++) {
-        i_word = Object.keys(user_score)[i]
-        let i_word_score =  JSON.parse( user_score[i_word] );
-        total_score += parseInt(i_word_score.score)
-        total_try += parseInt(i_word_score.average_try)
-    }
-
-    localStorage.score_all_word = JSON.stringify( {all_words: nbr_words, all_score: total_score, all_try: total_try, average_try: total_try/total_score} );
-    localStorage.score_current_word = JSON.stringify( u_score_word )
-}
 
 
 function score_page(){
@@ -207,4 +264,20 @@ function score_page(){
 }
 function disconnect_profile(){
     window.location.href = '/logout'
+}
+
+
+
+
+
+// Function that display within an INPUTED area the INPUTED text as a warning/error
+function getWarningInformation(warning_element, warning_content){
+    warning_element.style.opacity = 1;
+    warning_element.style.transition = 'opacity linear 2s'; 
+    warning_element.innerHTML = '⚠️' + '  ' + warning_content
+    setTimeout(function() {
+        warning_element.style.opacity = 0;
+        warning_element.style.transition = 'opacity linear 2s';
+        warning_element.innerHTML = ''
+    }, 5000);
 }

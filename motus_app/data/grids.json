@@ -1,4 +1,2383 @@
 {
-    "RF": {},
-    "Testz": {}
+    "Dorian": {
+        "2022-10-21": {
+            "COLONNE": {
+                "DISCOVERED": false,
+                "GRID": {
+                    "LEVEL": 0,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "C",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "Test": {
+        "2022-10-21": {
+            "COLONNE": {
+                "DISCOVERED": true,
+                "GRID": {
+                    "LEVEL": 2,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "C",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "U",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "R",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "A",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "G",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "E",
+                                "BACKGROUND-COLOR": "#05A105"
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "C",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "U",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "R",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "A",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "G",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "E",
+                                "BACKGROUND-COLOR": "#05A105"
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "C",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "L",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "E",
+                                "BACKGROUND-COLOR": "#05A105"
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            },
+            "RUE": {
+                "DISCOVERED": false,
+                "GRID": {
+                    "LEVEL": 5,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "R",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "I",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "Z",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "R",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "I",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "Z",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "R",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "I",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "Z",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "R",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "I",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "Z",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "R",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "I",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "Z",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "D": {},
+    "DD": {
+        "2022-10-21": {
+            "COLONNE": {
+                "DISCOVERED": false,
+                "GRID": {
+                    "LEVEL": 0,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "C",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "Admin": {
+        "2022-10-21": {
+            "COLONNE": {
+                "DISCOVERED": false,
+                "GRID": {
+                    "LEVEL": 0,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "C",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "AAA": {
+        "2022-10-21": {
+            "COLONNE": {
+                "DISCOVERED": true,
+                "GRID": {
+                    "LEVEL": 0,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "C",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "L",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "E",
+                                "BACKGROUND-COLOR": "#05A105"
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "b": {
+        "2022-10-21": {
+            "COLONNE": {
+                "DISCOVERED": true,
+                "GRID": {
+                    "LEVEL": 0,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "C",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "L",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "E",
+                                "BACKGROUND-COLOR": "#05A105"
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "c": {
+        "2022-10-21": {
+            "COLONNE": {
+                "DISCOVERED": true,
+                "GRID": {
+                    "LEVEL": 0,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "C",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "L",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "E",
+                                "BACKGROUND-COLOR": "#05A105"
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "d": {
+        "2022-10-21": {
+            "COLONNE": {
+                "DISCOVERED": true,
+                "GRID": {
+                    "LEVEL": 0,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "C",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "L",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "E",
+                                "BACKGROUND-COLOR": "#05A105"
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "de": {
+        "2022-10-21": {
+            "COLONNE": {
+                "DISCOVERED": true,
+                "GRID": {
+                    "LEVEL": 0,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "C",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "L",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "E",
+                                "BACKGROUND-COLOR": "#05A105"
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "q": {
+        "2022-10-21": {
+            "COLONNE": {
+                "DISCOVERED": true,
+                "GRID": {
+                    "LEVEL": 0,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "C",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "L",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "E",
+                                "BACKGROUND-COLOR": "#05A105"
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "x": {
+        "2022-10-21": {
+            "COLONNE": {
+                "DISCOVERED": true,
+                "GRID": {
+                    "LEVEL": 0,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "C",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "L",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "E",
+                                "BACKGROUND-COLOR": "#05A105"
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "v": {
+        "2022-10-21": {
+            "COLONNE": {
+                "DISCOVERED": true,
+                "GRID": {
+                    "LEVEL": 0,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "C",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "L",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "E",
+                                "BACKGROUND-COLOR": "#05A105"
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "j": {
+        "2022-10-21": {
+            "COLONNE": {
+                "DISCOVERED": true,
+                "GRID": {
+                    "LEVEL": 0,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "C",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "L",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "O",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "N",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "E",
+                                "BACKGROUND-COLOR": "#05A105"
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_5": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_6": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            },
+            "RUE": {
+                "DISCOVERED": false,
+                "GRID": {
+                    "LEVEL": 1,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "R",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "I",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "Z",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "R",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            },
+            "ATOME": {
+                "DISCOVERED": false,
+                "GRID": {
+                    "LEVEL": 1,
+                    "SCHEME": {
+                        "LEVEL_0": {
+                            "CHARACTER_0": {
+                                "LETTER": "A",
+                                "BACKGROUND-COLOR": "#05A105"
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "R",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "R",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "E",
+                                "BACKGROUND-COLOR": "#FF8000"
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "T",
+                                "BACKGROUND-COLOR": "#FF8000"
+                            }
+                        },
+                        "LEVEL_1": {
+                            "CHARACTER_0": {
+                                "LETTER": "A",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_2": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_3": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        },
+                        "LEVEL_4": {
+                            "CHARACTER_0": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_1": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_2": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_3": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            },
+                            "CHARACTER_4": {
+                                "LETTER": "",
+                                "BACKGROUND-COLOR": ""
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,4 +1,4 @@
-FROM node:12.22.9 as authenticate
+FROM node:12.22.9
 
 # Create app directory
 WORKDIR /app

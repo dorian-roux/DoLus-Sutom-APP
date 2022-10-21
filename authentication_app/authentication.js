@@ -1,29 +1,53 @@
+//////////////////////
+// AUTHENTIFICATION //
+//////////////////////
+
+
+// -- Set Requirements and COnstants -- //
 const express = require('express')
 const path = require('path')
 const app = express()
 const fs = require('fs')
 const os = require('os')
 const { createHash } = require('crypto')
-
 const port = process.env.PORT || 4200
 
 
 
-app.get('/', (req, res) => {
+// - APIs - //
+
+// -- Send a BASIC string at the Authentication HOST -- //
+app.get('/', (_, res) => {
     res.send('Welcome in your AUTHENTICATION')
 });
 
 
-
-app.use((req, res, next) => {
+// -- Set the "Acces-Control" to allow the usage of "FETCH" within the Static Files -- //
+app.use((_, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 })
 
 
-// HEATHLCHECK
-app.get('/healthcheck', (req, res) => {
+// -- Verify the correspoding USERNAME & PASSWORD queried from the URL (for the LOGIN) -- //
+app.get('/loginUserAccount', (req, res) => {
+    var username = req.query.username;
+    var password = req.query.password;
+    res.send(loginUserAccount(username, password))
+})
+
+
+// -- Verify the corresponding USERNAME & PASSWORD queried from the URL (for the REGISTER) -- //
+app.get('/registerUserAccount', (req, res) =>{
+    var username = req.query.username;
+    var password = req.query.password;
+    res.send(registerUserAccount(username, password))
+})
+
+
+// -- Perform an HEALTH_CHECK of the SERVICE -- //
+app.get('/healthcheck', (_, res) => {
     const healthcheck = {
         uptime: process.uptime(),
         message: 'OK',
@@ -38,8 +62,8 @@ app.get('/healthcheck', (req, res) => {
 });
 
 
-// PORT
-app.get('/port', (req, res) => {
+// -- Get the Information related to the HOST and PORT -- //
+app.get('/port', (_, res) => {
     res.send(`MOTUS APP working on ${os.hostname()} port ${port}`)
 });
 
@@ -48,22 +72,26 @@ app.listen(port, () => {
 });
 
 
+// - FUNCTIONS - //
 
-app.get('/loginUser', (req, res) => {
-    var username = req.query.username;
-    var password = req.query.password;
-    res.send(loginUserAccount(username, password))
-})
+// // -- Perform a LOGIN Verification on the Authentication Flat File -- // 
+function loginUserAccount(username, password){
+    const users_authentication_file = path.join(__dirname, 'data/users_authentication.json')
+    const users_authentication = readJsonSync(users_authentication_file)
+
+    if (!(Object.keys(users_authentication).includes(username))){  // Check whenever the inputed user does not exist
+        return 'Wrong USERNAME / USERNAME not REGISTERED'
+    }else{
+        if (hashPassword(password) == users_authentication[username]){
+            return true
+        }else{
+            return 'Wrong PASSWORD / PASSWORD not REGISTERED'
+        }
+    }
+}
 
 
-app.get('/registerUserAccount', (req, res) =>{
-    var username = req.query.username;
-    var password = req.query.password;
-    res.send(registerUserAccount(username, password))
-})
-
-
-//
+// // -- Perform a "deeper" REGISTER Verification and Saving on the Authentication Flat File -- // 
 function registerUserAccount(username, password){
     const users_authentication_file = path.join(__dirname, 'data/users_authentication.json')
     const users_authentication = readJsonSync(users_authentication_file)
@@ -84,30 +112,14 @@ function registerUserAccount(username, password){
 
 }
 
-//
-function loginUserAccount(username, password){
-    const users_authentication_file = path.join(__dirname, 'data/users_authentication.json')
-    const users_authentication = readJsonSync(users_authentication_file)
 
-    if (!(Object.keys(users_authentication).includes(username))){  // Check whenever the inputed user does not exist
-        return 'Wrong USERNAME / USERNAME not REGISTERED'
-    }else{
-        if (hashPassword(password) == users_authentication[username]){
-            return true
-        }else{
-            return 'Wrong PASSWORD / PASSWORD not REGISTERED'
-        }
-    }
-}
-
-
-// Read JSON Users File
+// Read JSON Users File //
 function readJsonSync(filename_json){
     return JSON.parse(fs.readFileSync(filename_json))
 }
 
 
-// Hash the user PASSWORD
+// Hash the user PASSWORD //
 function hashPassword(password){
     return createHash('sha256').update(password).digest('hex');
 }

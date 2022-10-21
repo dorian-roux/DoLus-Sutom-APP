@@ -30,7 +30,7 @@ function makeLoginUser(event) {
     }
     
     
-    fetch('http://localhost:4200/loginUser/?username=' + username + '&password=' + password)
+    fetch('http://localhost:4200/loginUserAccount/?username=' + username + '&password=' + password)
     .then(response => {
         if(response.ok){
             return response.text();

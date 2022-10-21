@@ -1,31 +1,79 @@
 {
-    "Dorian": {
-        "CHU": {
-            "score": 1,
-            "total_attempts": 6
-        },
-        "ANIMES": {
-            "score": 0,
-            "total_attempts": 4
-        },
-        "PEINTRE": {
-            "score": 1,
-            "total_attempts": 17
-        },
-        "RUDOLF": {
+    "Admin": {
+        "undefined": {
             "score": 0,
             "total_attempts": 1
         }
     },
-    "D": {},
-    "Test": {},
-    "TT": {},
-    "TTT": {},
-    "TA": {},
-    "RF": {},
-    "Testz": {
-        "COLETTE": {
+    "Test": {
+        "COLONNE": {
             "score": 1,
+            "total_attempts": 3
+        },
+        "RUE": {
+            "score": 0,
+            "total_attempts": 5
+        }
+    },
+    "AAA": {
+        "COLONNE": {
+            "score": 1,
+            "total_attempts": 1
+        }
+    },
+    "b": {
+        "COLONNE": {
+            "score": 1,
+            "total_attempts": 1
+        }
+    },
+    "c": {
+        "COLONNE": {
+            "score": 1,
+            "total_attempts": 1
+        }
+    },
+    "d": {
+        "COLONNE": {
+            "score": 1,
+            "total_attempts": 1
+        }
+    },
+    "de": {
+        "COLONNE": {
+            "score": 1,
+            "total_attempts": 1
+        }
+    },
+    "q": {
+        "COLONNE": {
+            "score": 1,
+            "total_attempts": 1
+        }
+    },
+    "x": {
+        "COLONNE": {
+            "score": 1,
+            "total_attempts": 1
+        }
+    },
+    "v": {
+        "COLONNE": {
+            "score": 1,
+            "total_attempts": 1
+        }
+    },
+    "j": {
+        "COLONNE": {
+            "score": 1,
+            "total_attempts": 1
+        },
+        "RUE": {
+            "score": 0,
+            "total_attempts": 1
+        },
+        "ATOME": {
+            "score": 0,
             "total_attempts": 1
         }
     }
