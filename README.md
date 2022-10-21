@@ -10,6 +10,14 @@ The microservice unit had as its objective to progressivly build a web applicati
 # Table of Contents
 1. [Project structure](#project-structure)
 2. [Prerequisite](#prerequisite)
+3. [Launch the APP](#launch-the-app)
+4. [Front](#front)
+5. [Quick Description of DoLus, our SUTOM Game](#quick-description-of-dolus-our-sutom-game)
+6. [AUTHENTICATION](#authentication)
+7. [Score Management](#score-management)
+8. [DoLus Home Page](#dolus-home-page)
+9. [Monitoring](#monitoring)
+10. [Improvements and Next Features](#improvements-and-next-features)
 
 
 ---
