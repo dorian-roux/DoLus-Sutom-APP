@@ -45,7 +45,7 @@ Here is an overview of the path of this repository. As a concern of visibility, 
 │       │   ├── register.html  
 │       │   └── scoreboard.html   
 ├── FrontCapture
-│   ├── ...
+│   ├── ...  
 ├── motus_app  
 │   ├── data  
 │   │   └── grid.json  
