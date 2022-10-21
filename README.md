@@ -99,7 +99,8 @@ users.json : one dictionnary per user and a sub dictionnary per word the user ha
 
 
 ## Authentication
-
+The authentication app allows the user to enter his credentials then it checks inside a json file if the credentials do exist.
+If it does the user is redirected to the main app otherwise there is an alert telling the user that he entered wrong credentials.
 ```mermaid
 sequenceDiagram
     Client ->>+ Authentication: Credentials (Login / Password)    
@@ -108,7 +109,7 @@ sequenceDiagram
     alt if right credentials
         Authentication ->>+ Client: Redirect to main app
     else if wrong credentials
-        Authentication ->>+ Client: Alert wrong password
+        Authentication ->>+ Client: Alert wrong credentials
 end
 ```
 
@@ -117,7 +118,7 @@ end
 
 When the user submits a guess the information is sent to the score app.
 The score app updates the score file according to the guess.
-The score app shows the informations stored in the score file
+The score page shows the informations stored in the score file where we can see the average number of try, the number of words found.
 
 
 ```mermaid
@@ -131,12 +132,8 @@ sequenceDiagram
 end
 ```
 
+## Monitoring
 
-    which server are you gone use ?
-    which port are you gone use ?
-    which API are you gone call ? which parameters ?
-    Can we handle more than one user ?
-    What data do we want to store ?
 
 
 ### Fichier Score
