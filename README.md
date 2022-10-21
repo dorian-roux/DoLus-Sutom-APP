@@ -43,8 +43,9 @@ Here is an overview of the path of this repository. As a concern of visibility, 
 │       │   ├── login.html  
 │       │   ├── main.html  
 │       │   ├── register.html  
-│       │   └── scoreboard.html             
-├── README.md  
+│       │   └── scoreboard.html   
+├── FrontCapture
+│   ├── ...
 ├── motus_app  
 │   ├── data  
 │   │   └── grid.json  
@@ -54,6 +55,8 @@ Here is an overview of the path of this repository. As a concern of visibility, 
 │   ├── package.json  
 │   ├── package-lock.json  
 │   ├── index.js  
+├── prometheus  
+│   ├── prometheus.yml  
 ├── score_app  
 │   ├── data  
 │   │   └── users.json  
@@ -61,6 +64,10 @@ Here is an overview of the path of this repository. As a concern of visibility, 
 │   ├── package.json  
 │   ├── package-lock.json  
 │   ├── score.js  
+├── docker-compose.yml  
+├── haproxy.cfg  
+├── README.md  
+
 
 ---
 
@@ -328,6 +335,7 @@ The steps are relatively similar with Loki.
 
 If someone wanted to continue the development of our project, well, he could easily. There was many features that we wanted to implment and we could not by lack of knowledge but mostly lack of time. Among them there was:
 -   Improvement of the security, OpenID, Oauth2 and better database systems (such as postgresDB).
+-   Add the HAPROXY
 -   Improvement of the monitoring on Grafana with better logs from Loki and metrics from Prometheus.
 -   Fix the possibles existing bugs that we could not find due to an absence of unit testing.
 -   Improve the design by using some frameworks as React or Angular.
